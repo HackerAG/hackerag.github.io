@@ -1,3 +1,2 @@
-set message=`[ %date% : INFO : %computername% ]` %computername% hat updates angefragt.
-curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST --data "{\"content\": \"%message%\"}" https://discord.com/api/webhooks/1214685298286403707/DccIjcUgVznOdmI7H83RhO6hmezGcDDcHmqzQ3Nqc5sPfiBmie9B8Bo1NlZdv43cfYN6
-timeout -t 720 -nobreak
+echo Keine Updates zur Zeit!
+pause
