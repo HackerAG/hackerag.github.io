@@ -1,10 +1,105 @@
 <!DOCTYPE html>
-<html>
+<title>HackerAG</title>
+<html lang="de">
 <head>
-<title>HackerAG [WIP]</title>
-  <h4><a href="https://hackerag.github.io/computers" >Jeder Computer</a></h4>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS-Code für das Design der Website */
+        @font-face { font-family: HackerAG-Font; src: url("main-font.ttf"); }
+        body {
+            background-color: #20b164; /* Hintergrundfarbe der Website */
+            margin: 0; /* Kein Abstand zum Rand */
+            font-family: HackerAG-Font; /* Schriftart der Website */
+        }
+        .container {
+            max-width: 800px; /* Maximale Breite der Website */
+            margin: 0 auto; /* Zentrierung der Website */
+        }
+        .logo {
+            width: 100px; /* Breite des Logos */
+            height: 100px; /* Höhe des Logos */
+            position: absolute; /* Absolute Positionierung des Logos */
+            top: 10px; /* Abstand zum oberen Rand */
+            right: 10px; /* Abstand zum rechten Rand */
+        }
+        .menu {
+            display: none; /* Das Menü ist standardmäßig nicht sichtbar */
+        }
+        .menu-toggle {
+            display: block; /* Der Menü-Button ist sichtbar */
+            width: 40px; /* Breite des Menü-Buttons */
+            height: 40px; /* Höhe des Menü-Buttons */
+            position: absolute; /* Absolute Positionierung des Menü-Buttons */
+            top: 10px; /* Abstand zum oberen Rand */
+            left: 10px; /* Abstand zum linken Rand */
+            cursor: pointer; /* Der Cursor wird zu einem Zeiger */
+        }
+        .menu-toggle span {
+            display: block; /* Die Striche sind sichtbar */
+            width: 100%; /* Die Striche füllen die Breite des Menü-Buttons aus */
+            height: 4px; /* Die Höhe der Striche */
+            background-color: white; /* Die Farbe der Striche */
+            margin: 6px 0; /* Der Abstand zwischen den Strichen */
+        }
+        .menu ul {
+            list-style: none; /* Keine Aufzählungszeichen für die Liste */
+            padding: 0; /* Kein Abstand innerhalb der Liste */
+            margin: 0; /* Kein Abstand außerhalb der Liste */
+        }
+        .menu li {
+            padding: 10px; /* Abstand innerhalb der Listenelemente */
+            border-bottom: 1px solid white; /* Eine weiße Linie unter jedem Listenelement */
+        }
+        .menu li a {
+            color: white; /* Die Farbe der Links */
+            text-decoration: none; /* Keine Unterstreichung der Links */
+        }
+        @media (min-width: 600px) {
+            /* CSS-Code für größere Bildschirme */
+            .menu {
+                display: block; /* Das Menü ist sichtbar */
+                position: absolute; /* Absolute Positionierung des Menüs */
+                top: 60px; /* Abstand zum oberen Rand */
+                left: 10px; /* Abstand zum linken Rand */
+            }
+            .menu-toggle {
+                display: none; /* Der Menü-Button ist nicht sichtbar */
+            }
+            .menu li {
+                display: inline-block; /* Die Listenelemente sind nebeneinander */
+                border: none; /* Keine Linie unter den Listenelementen */
+                margin-right: 10px; /* Abstand zwischen den Listenelementen */
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Work in progress</h1>
+    <div class="container">
+        <img src="hackerag_logo.png" alt="HackerAG Logo" class="logo"> <!-- Das Logo der Website -->
+        <div class="menu-toggle"> <!-- Der Menü-Button -->
+            <span></span> <!-- Der obere Strich -->
+            <span></span> <!-- Der mittlere Strich -->
+            <span></span> <!-- Der untere Strich -->
+        </div>
+        <div class="menu"> <!-- Das Menü der Website -->
+            <ul>
+                <div style="background-color: #20b164; color: #000000; font-size: xxx-large;">
+                    <p><b class="hackerag_font">Willkommen auf der HackerAG Homepage!</b></p>
+               </div>
+                <li><a href="https://hackerag.github.io/website/discord-bot-redirect" style="color: #5662f6";>Discord Server</a></li> <!-- Ein Link zu Discord -->
+                <li><a href="https://www.google.com">Links</a></li> <!-- Ein Link zu Google -->
+                <li><a href="https://www.bing.com/">Links2</a></li> <!-- Ein Link zu Bing -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        // JavaScript-Code für die Interaktivität der Website
+        var menuToggle = document.querySelector(".menu-toggle"); // Das Menü-Button-Element
+        var menu = document.querySelector(".menu"); // Das Menü-Element
+        menuToggle.addEventListener("click", function() { // Wenn auf das Menü-Button geklickt wird
+            menu.classList.toggle("active"); // Das Menü wird ein- oder ausgeblendet
+        });
+    </script>
 </body>
 </html>
