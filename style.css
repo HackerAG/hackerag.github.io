@@ -1,0 +1,21 @@
+body {
+  background-color: #111111;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3em;
+  color: #00ed01;
+  /*text-transform: uppercase;*/
+}
+
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
