@@ -1,1 +1,0 @@
-screen -S SSHydrogen java -Xmx1G -jar SSHydrogen.jar

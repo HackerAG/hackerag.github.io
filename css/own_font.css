@@ -1,0 +1,4 @@
+@font-face { font-family: InkFont; src: url("../font.ttf"); }
+body {
+    font-family: InkFont;
+}
